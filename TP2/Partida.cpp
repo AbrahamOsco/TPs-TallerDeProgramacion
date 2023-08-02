@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Partida.h"
 
 Partida::Partida(std::string nombrePartida, int cantJugReq) : nombrePartida(nombrePartida)
@@ -14,6 +15,8 @@ std::string Partida::obtenerEstado() const {
 bool Partida::unirse() {
     if(cantJugAct == cantJugRequeridos) return false;
     cantJugAct +=1;
+    if(cantJugAct == cantJugRequeridos)
+        std::cout << "Comenzando partida " + nombrePartida + "...\n" ;
     return true;
 }
 

@@ -97,6 +97,36 @@ build CMakeFiles/Threads.dir/Protocolo.cpp.o: CXX_COMPILER__Threads_Debug /home/
   OBJECT_DIR = CMakeFiles/Threads.dir
   OBJECT_FILE_DIR = CMakeFiles/Threads.dir
 
+build CMakeFiles/Threads.dir/liberror.cpp.o: CXX_COMPILER__Threads_Debug /home/abraham/Escritorio/Taller/TP2/liberror.cpp || cmake_object_order_depends_target_Threads
+  DEP_FILE = CMakeFiles/Threads.dir/liberror.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Threads.dir
+  OBJECT_FILE_DIR = CMakeFiles/Threads.dir
+
+build CMakeFiles/Threads.dir/Thread.cpp.o: CXX_COMPILER__Threads_Debug /home/abraham/Escritorio/Taller/TP2/Thread.cpp || cmake_object_order_depends_target_Threads
+  DEP_FILE = CMakeFiles/Threads.dir/Thread.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Threads.dir
+  OBJECT_FILE_DIR = CMakeFiles/Threads.dir
+
+build CMakeFiles/Threads.dir/ThreadAceptador.cpp.o: CXX_COMPILER__Threads_Debug /home/abraham/Escritorio/Taller/TP2/ThreadAceptador.cpp || cmake_object_order_depends_target_Threads
+  DEP_FILE = CMakeFiles/Threads.dir/ThreadAceptador.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Threads.dir
+  OBJECT_FILE_DIR = CMakeFiles/Threads.dir
+
+build CMakeFiles/Threads.dir/ThreadCliente.cpp.o: CXX_COMPILER__Threads_Debug /home/abraham/Escritorio/Taller/TP2/ThreadCliente.cpp || cmake_object_order_depends_target_Threads
+  DEP_FILE = CMakeFiles/Threads.dir/ThreadCliente.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Threads.dir
+  OBJECT_FILE_DIR = CMakeFiles/Threads.dir
+
+build CMakeFiles/Threads.dir/JuegoProtected.cpp.o: CXX_COMPILER__Threads_Debug /home/abraham/Escritorio/Taller/TP2/JuegoProtected.cpp || cmake_object_order_depends_target_Threads
+  DEP_FILE = CMakeFiles/Threads.dir/JuegoProtected.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Threads.dir
+  OBJECT_FILE_DIR = CMakeFiles/Threads.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Threads
@@ -105,7 +135,7 @@ build CMakeFiles/Threads.dir/Protocolo.cpp.o: CXX_COMPILER__Threads_Debug /home/
 #############################################
 # Link the executable Threads
 
-build Threads: CXX_EXECUTABLE_LINKER__Threads_Debug CMakeFiles/Threads.dir/serverMain.cpp.o CMakeFiles/Threads.dir/Servidor.cpp.o CMakeFiles/Threads.dir/Partida.cpp.o CMakeFiles/Threads.dir/Socket.cpp.o CMakeFiles/Threads.dir/Resolver.cpp.o CMakeFiles/Threads.dir/Juego.cpp.o CMakeFiles/Threads.dir/Cliente.cpp.o CMakeFiles/Threads.dir/Protocolo.cpp.o
+build Threads: CXX_EXECUTABLE_LINKER__Threads_Debug CMakeFiles/Threads.dir/serverMain.cpp.o CMakeFiles/Threads.dir/Servidor.cpp.o CMakeFiles/Threads.dir/Partida.cpp.o CMakeFiles/Threads.dir/Socket.cpp.o CMakeFiles/Threads.dir/Resolver.cpp.o CMakeFiles/Threads.dir/Juego.cpp.o CMakeFiles/Threads.dir/Cliente.cpp.o CMakeFiles/Threads.dir/Protocolo.cpp.o CMakeFiles/Threads.dir/liberror.cpp.o CMakeFiles/Threads.dir/Thread.cpp.o CMakeFiles/Threads.dir/ThreadAceptador.cpp.o CMakeFiles/Threads.dir/ThreadCliente.cpp.o CMakeFiles/Threads.dir/JuegoProtected.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/Threads.dir
   POST_BUILD = :

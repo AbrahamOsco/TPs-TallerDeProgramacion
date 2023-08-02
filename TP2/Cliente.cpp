@@ -30,33 +30,25 @@ void Cliente::operacionCrear(Protocolo &protocolo) {
     std::cin >> cantJugadores;
     getline(std::cin, nombrePartida,'\n');
     nombrePartida = nombrePartida.substr(1); //parseo un string desde la posicion 1 hasta el final.
-
-    protocolo.enviarCadena(socket, "CREAR");
-    protocolo.enviarCadena(socket, " ");
-    protocolo.enviarCadena(socket, cantJugadores);
-    protocolo.enviarCadena(socket, " ");
-    protocolo.enviarCadena(socket, nombrePartida);
-    protocolo.enviarCadena(socket, "\n\n");
-
-    printRsptCrear(protocolo.recibirCadena(socket));
+    protocolo.enviarPeticionCrearPartida(socket, nombrePartida, cantJugadores);
+    std::string  rsptCrear = protocolo.recibirResultado(socket);
+    printRsptCrear( rsptCrear);
 }
 
 void Cliente::operacionUnirse(Protocolo &protocolo) {
     std::string nombrePartida;
-    // al recibir "unirse partida 123" -> con cin obtenemos unirse y con getline obtenemos " partida 123" con espacio
     getline(std::cin, nombrePartida, '\n');
-    nombrePartida = nombrePartida.substr(1);
-    protocolo.enviarCadena(socket, "UNIR");
-    protocolo.enviarCadena(socket, nombrePartida);
-    protocolo.enviarCadena(socket, "\n\n");
-
-    printRsptUnirse(protocolo.recibirCadena(socket));
+    nombrePartida = nombrePartida.substr(1);  // obtenemos " duelo"  lo pasamos a "duelo".
+    protocolo.enviarPeticionUnirsePartida(socket, nombrePartida);
+    std::string respuestaUnirse = protocolo.recibirResultado(socket);
+    printRsptUnirse(respuestaUnirse);
 }
 
 void Cliente::operacionListar(Protocolo &protocolo) {
     protocolo.enviarCadena(socket, "LISTAR");
     protocolo.enviarCadena(socket, "\n\n");
-    std:: cout << protocolo.recibirCadena(socket);
+    std::string rsptListar = protocolo.recibirCadena(socket);
+    std:: cout << rsptListar;
 }
 
 void Cliente::printRsptCrear(const std::string &unaRespuesta) {
@@ -65,7 +57,6 @@ void Cliente::printRsptCrear(const std::string &unaRespuesta) {
     } else if (unaRespuesta == "ERROR\n\n"){
         std::cout << "Creación fallida\n";
     }
-
 }
 
 void Cliente::printRsptUnirse(const std::string &unaRespuesta) {

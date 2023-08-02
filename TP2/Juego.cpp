@@ -11,6 +11,7 @@ bool Juego::crearPartida(std::string nombrePartida, int cantJugReq) {
     return true;
 }
 
+
 bool Juego::unirsePartida(std::string nombrePartida) {
     if( diccionarioPartidas.count(nombrePartida) == 0 ) return false;
 

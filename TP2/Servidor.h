@@ -9,23 +9,17 @@
 #include "Socket.h"
 #include "Protocolo.h"
 #include "Juego.h"
+#include "ThreadAceptador.h"
+#include "JuegoProtected.h"
 
 class Servidor {
-    Socket socket;
-    Juego juego;
+    JuegoProtected unJuego;
+    ThreadAceptador threadAceptador;
 
 public:
     Servidor(const char *serviceName);
 
     int run();
-
-    std::string recibirComando(Socket &socket, Protocolo &protocolo);
-
-    void operacionCrear(Socket &socket, Protocolo &protocolo);
-
-    void operacionUnir(Socket &socket, Protocolo &protocolo);
-
-    void operacionListar(Socket &socket, Protocolo &protocolo);
 };
 
 

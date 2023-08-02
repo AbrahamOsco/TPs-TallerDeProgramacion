@@ -23,6 +23,19 @@ public:
 
 
     std::string recibirCadena(Socket &socket);
+
+
+    void recibirPeticionCrearPartida(Socket &socket, std::string& nombrePartida, std::string& cantJugReq);
+
+    void enviarPeticionCrearPartida(Socket &socket, const std::string &nombrePartida, const std::string &cantJugReq);
+
+    void enviarPeticionUnirsePartida(Socket &socket, const std::string &unNombrePartida);
+
+    void recibirPeticionUnirsePartida(Socket &socket, std::string &unNombrePartida);
+
+    void enviarResultado(Socket &socket, const bool &resultadoPeticion);
+
+    std::string recibirResultado(Socket &socket);
 };
 
 

@@ -27,14 +27,23 @@ public:
 
     Socket accept();
 
-    // Ahora hacemos el socket movible:
+    // Ahora hacemos el sktAceptador movible:
     Socket(Socket &&); //constructor por movimiento
     Socket& operator=(Socket&& other); //copia por movimiento
 
-    //Eliminamos la construccion de socket por copia y la asignacion por copia de un socket.
+    //Eliminamos la construccion de sktAceptador por copia y la asignacion por copia de un sktAceptador.
     Socket(const Socket&) = delete;
     Socket& operator=(const Socket&) = delete;
 
+    void shutdown(int how);
+
+    int close();
+
+    void chk_skt_or_fail() const;
+
+    ~Socket();
+
+    void closeSkt();
 };
 
 

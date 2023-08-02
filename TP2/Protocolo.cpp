@@ -27,6 +27,7 @@ std::string Protocolo::recibirCadena(Socket& socket){
     int s = 0;
     uint32_t  largoCadena = 0;
     s += socket.recvAll(&largoCadena, sizeof(largoCadena), &wasClosed );
+    if (wasClosed) return ""; // agrege yo caso de que no leyo y esta cerrado el skt devolvemos sz.
     largoCadena = ntohl(largoCadena);
     char buffRecvCadena[largoCadena], buffRetonar[largoCadena+1];
 
@@ -40,3 +41,43 @@ std::string Protocolo::recibirCadena(Socket& socket){
 
     return buffRetonar;
 }
+
+
+void Protocolo::recibirPeticionCrearPartida(Socket &socket, std::string& unNombrePartida, std::string& cantJugReq) {
+    std::string cadenaVacia, saltos;
+    cadenaVacia = recibirCadena(socket);
+    cantJugReq = recibirCadena(socket);
+    cadenaVacia = recibirCadena(socket);
+    unNombrePartida = recibirCadena(socket);
+    saltos = recibirCadena(socket);
+}
+
+void Protocolo::enviarPeticionCrearPartida(Socket &socket, const std::string &nombrePartida, const std::string &cantJugReq) {
+    enviarCadena(socket, "CREAR");
+    enviarCadena(socket, " ");
+    enviarCadena(socket, cantJugReq);
+    enviarCadena(socket, " ");
+    enviarCadena(socket, nombrePartida);
+    enviarCadena(socket, "\n\n");
+}
+
+void Protocolo::enviarPeticionUnirsePartida(Socket &socket, const std::string &unNombrePartida) {
+    enviarCadena(socket, "UNIR");
+    enviarCadena(socket, unNombrePartida);
+    enviarCadena(socket, "\n\n");
+}
+
+void Protocolo::recibirPeticionUnirsePartida(Socket &socket, std::string &unNombrePartida) {
+    unNombrePartida = recibirCadena(socket);
+    std::string saltos = recibirCadena(socket);
+}
+
+void Protocolo::enviarResultado(Socket &socket, const bool &resultadoPeticion) {
+    if (resultadoPeticion) enviarCadena(socket, "OK\n\n");
+    else enviarCadena(socket, "ERROR\n\n");
+}
+std::string Protocolo::recibirResultado(Socket& socket){
+    return recibirCadena(socket);
+}
+
+
