@@ -1,4 +1,5 @@
 # Sockets TP1 - Correciones
+## Nota: 10
 Para poder desarollar el tp se decidio seguir la heuristica de dividir el tp en cuatro modulos:
   1. El juego (implemtancion de la logica del juego).
   2. El protocolo (Definicion de los metodos del protocolo con sus argumentos).
