@@ -1,4 +1,5 @@
 # TP2-Threads Correciones
+## Nota: 10
 Para poder desarollar el tp se divideron las tareas en:
 1. Input Parser e implementacion de ActionDTO, AnswerDTO
 2. Client, Server y la **herencia del  protocolo** para un solo cliente.
