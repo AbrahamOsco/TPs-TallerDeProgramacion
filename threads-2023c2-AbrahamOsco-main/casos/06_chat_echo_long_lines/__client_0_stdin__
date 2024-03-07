@@ -1,0 +1,10 @@
+select basic
+dir 1
+move
+jump 0
+jump 0
+dir 0
+move
+jump 0
+jump 0
+jump 0

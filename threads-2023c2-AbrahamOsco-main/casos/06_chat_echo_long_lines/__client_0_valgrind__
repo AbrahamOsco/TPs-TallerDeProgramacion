@@ -1,0 +1,23 @@
+==00:00:00:00.000 9860== Memcheck, a memory error detector
+==00:00:00:00.000 9860== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==00:00:00:00.000 9860== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==00:00:00:00.000 9860== Command: ./client 127.0.0.1 1515
+==00:00:00:00.000 9860== Parent PID: 9856
+==00:00:00:00.000 9860== 
+==00:00:00:06.232 9860== 
+==00:00:00:06.232 9860== FILE DESCRIPTORS: 5 open (3 std) at exit.
+==00:00:00:06.232 9860== Open file descriptor 63:
+==00:00:00:06.232 9860==    <inherited from parent>
+==00:00:00:06.232 9860== 
+==00:00:00:06.232 9860== Open file descriptor 3: /home/abraham/Escritorio/Taller/TPS-Taller-20232C/TP2/threads-2023c2-AbrahamOsco/casos/06_chat_echo_long_lines/__client_0_valgrind__
+==00:00:00:06.232 9860==    <inherited from parent>
+==00:00:00:06.232 9860== 
+==00:00:00:06.232 9860== 
+==00:00:00:06.232 9860== HEAP SUMMARY:
+==00:00:00:06.232 9860==     in use at exit: 0 bytes in 0 blocks
+==00:00:00:06.232 9860==   total heap usage: 13 allocs, 13 frees, 81,244 bytes allocated
+==00:00:00:06.232 9860== 
+==00:00:00:06.232 9860== All heap blocks were freed -- no leaks are possible
+==00:00:00:06.232 9860== 
+==00:00:00:06.232 9860== For lists of detected and suppressed errors, rerun with: -s
+==00:00:00:06.232 9860== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

@@ -1,0 +1,23 @@
+==00:00:00:00.000 9511== Memcheck, a memory error detector
+==00:00:00:00.000 9511== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==00:00:00:00.000 9511== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==00:00:00:00.000 9511== Command: ./client 127.0.0.1 1509
+==00:00:00:00.000 9511== Parent PID: 9507
+==00:00:00:00.000 9511== 
+==00:00:00:21.256 9511== 
+==00:00:00:21.256 9511== FILE DESCRIPTORS: 5 open (3 std) at exit.
+==00:00:00:21.256 9511== Open file descriptor 63:
+==00:00:00:21.256 9511==    <inherited from parent>
+==00:00:00:21.256 9511== 
+==00:00:00:21.256 9511== Open file descriptor 3: /home/abraham/Escritorio/Taller/TPS-Taller-20232C/TP2/threads-2023c2-AbrahamOsco/casos/04_three_players_multiread_and_exits/__client_0_valgrind__
+==00:00:00:21.256 9511==    <inherited from parent>
+==00:00:00:21.256 9511== 
+==00:00:00:21.256 9511== 
+==00:00:00:21.256 9511== HEAP SUMMARY:
+==00:00:00:21.256 9511==     in use at exit: 0 bytes in 0 blocks
+==00:00:00:21.256 9511==   total heap usage: 5 allocs, 5 frees, 81,024 bytes allocated
+==00:00:00:21.256 9511== 
+==00:00:00:21.256 9511== All heap blocks were freed -- no leaks are possible
+==00:00:00:21.256 9511== 
+==00:00:00:21.256 9511== For lists of detected and suppressed errors, rerun with: -s
+==00:00:00:21.256 9511== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

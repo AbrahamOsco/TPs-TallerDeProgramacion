@@ -1,0 +1,5 @@
+select nobasic
+dir 1
+move
+jump 1
+jump 0

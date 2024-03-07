@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CLionExternalBuildManager">
+    <target id="209802fa-9be6-4299-bb96-e7d69d59f612" name="Server11" defaultType="MAKE">
+      <configuration id="36751215-81eb-4038-a745-69a578d927ab" name="Server11" toolchainName="Default" />
+    </target>
+    <target id="6ad9ebf6-344e-4fd7-bce2-9db4c09e173b" name="Cliente" defaultType="MAKE">
+      <configuration id="01f1e8a7-d7e0-40e7-a928-065569d80884" name="Cliente" toolchainName="Default" />
+    </target>
+  </component>
+</project>

@@ -1,0 +1,23 @@
+==00:00:00:00.000 9474== Memcheck, a memory error detector
+==00:00:00:00.000 9474== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==00:00:00:00.000 9474== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==00:00:00:00.000 9474== Command: ./server 1508
+==00:00:00:00.000 9474== Parent PID: 9470
+==00:00:00:00.000 9474== 
+==00:00:00:22.267 9474== 
+==00:00:00:22.267 9474== FILE DESCRIPTORS: 5 open (3 std) at exit.
+==00:00:00:22.267 9474== Open file descriptor 63:
+==00:00:00:22.267 9474==    <inherited from parent>
+==00:00:00:22.267 9474== 
+==00:00:00:22.267 9474== Open file descriptor 3: /home/abraham/Escritorio/Taller/TPS-Taller-20232C/TP2/threads-2023c2-AbrahamOsco/casos/04_three_players_multiread_and_exits/__server_valgrind__
+==00:00:00:22.267 9474==    <inherited from parent>
+==00:00:00:22.267 9474== 
+==00:00:00:22.267 9474== 
+==00:00:00:22.267 9474== HEAP SUMMARY:
+==00:00:00:22.267 9474==     in use at exit: 0 bytes in 0 blocks
+==00:00:00:22.267 9474==   total heap usage: 50 allocs, 50 frees, 87,574 bytes allocated
+==00:00:00:22.267 9474== 
+==00:00:00:22.267 9474== All heap blocks were freed -- no leaks are possible
+==00:00:00:22.267 9474== 
+==00:00:00:22.267 9474== For lists of detected and suppressed errors, rerun with: -s
+==00:00:00:22.267 9474== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
